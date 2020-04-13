@@ -14,10 +14,21 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Adding nav item button (add)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addShoppingListItems))
+        
     }
 
-    @objc func addShoppingListItem
+    
+    @objc func addShoppingListItems() {
+        
+        // Setting up alert to add shopping item
+        let ac = UIAlertController(title: "Enter your item", message: nil, preferredStyle: .alert)
+        // Addind a textfield to alert controller
+        ac.addTextField()
+        
+    }
     
 
 }
