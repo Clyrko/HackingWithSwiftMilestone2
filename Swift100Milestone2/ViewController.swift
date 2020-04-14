@@ -56,6 +56,7 @@ class ViewController: UITableViewController {
         ac.addTextField()
         ac.textFields![0].text! = shoppingList[indexPath.row]
         
+        // Saving textfield
         ac.addAction(UIAlertAction(title: "Save", style: .default) { [unowned self] (action: UIAlertAction) in
             self.shoppingList[indexPath.row] = ac.textFields![0].text!
             self.tableView.reloadData()
